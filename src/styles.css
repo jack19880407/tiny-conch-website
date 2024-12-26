@@ -1,0 +1,738 @@
+/* 核心样式 */
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #3a7bc8;
+  --text-color: #333;
+  --white: #ffffff;
+  --shadow: 0 2px 15px rgba(74, 144, 226, 0.1);
+}
+
+body {
+  font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: var(--text-color);
+}
+
+/* 导航样式 */
+header {
+  background: linear-gradient(135deg, #4a90e2, #3a7bc8);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: var(--shadow);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* 服务部分样式 */
+.services-section {
+  padding: 6rem 2rem;
+  background: var(--white);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow);
+  border: 2px solid #4a90e2;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(74, 144, 226, 0.15);
+}
+
+.service-card::before,
+.service-card::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4a90e2;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.service-card::before {
+  top: 15px;
+  left: 15px;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.service-card::after {
+  bottom: 15px;
+  right: 15px;
+  border-left: 0;
+  border-top: 0;
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(74,144,226,0.1);
+  border-radius: 50%;
+  font-size: 2.5rem;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+.service-description {
+  color: #666;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.service-features {
+  list-style: none;
+  padding: 1.5rem 0 0;
+  margin: auto 0 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.service-features li {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  position: relative;
+  color: #555;
+}
+
+.service-features li:before {
+  content: "✓";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+/* 页脚样式 */
+footer {
+  background: linear-gradient(to bottom, #2c3e50, #1a252f);
+  color: var(--white);
+  padding: 4rem 2rem 2rem;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-section p {
+  margin: 0.8rem 0;
+  color: #a8b2c1;
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* 预约表单样式 */
+.appointment-section {
+  padding: 6rem 2rem;
+  background: var(--white);
+}
+
+.appointment-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.appointment-info {
+  padding-right: 2rem;
+}
+
+.appointment-info .section-header {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.contact-info {
+  display: grid;
+  gap: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  background: rgba(74,144,226,0.1);
+  padding: 1rem;
+  border-radius: 50%;
+  min-width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-item h3 {
+  color: var(--primary-color);
+  margin: 0 0 0.8rem 0;
+  font-size: 1.3rem;
+}
+
+.contact-item p {
+  margin: 0.5rem 0;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.appointment-form {
+  background: var(--white);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(74,144,226,0.1);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1.2rem;
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: var(--secondary-color);
+}
+
+button[type="submit"]:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* 响应调整 */
+@media (max-width: 1024px) {
+  .appointment-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .appointment-info {
+    padding-right: 0;
+  }
+
+  .appointment-info .section-header {
+    text-align: center;
+  }
+
+  .contact-info {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .appointment-section {
+    padding: 4rem 1rem;
+  }
+
+  .appointment-form {
+    padding: 2rem;
+  }
+
+  .contact-item {
+    padding: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .service-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .services-section {
+    padding: 4rem 1rem;
+  }
+
+  .section-header {
+    margin-bottom: 4rem;
+  }
+
+  .service-list {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding: 1rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* 管理面板样式 */
+.admin-panel {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.admin-header h2 {
+  color: var(--primary-color);
+}
+
+.appointments-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.appointment-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.appointment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.appointment-time {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.appointment-details p {
+  margin: 0.5rem 0;
+}
+
+.no-data {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+/* 服务详情页样式 */
+.service-detail-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.service-detail-header {
+  background: linear-gradient(135deg, #D4AF37, #C5A028);
+  color: var(--white);
+  padding: 1.5rem 0;
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.back-link {
+  color: var(--white);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.back-link:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.service-detail-header h1 {
+  font-size: 1.8rem;
+  margin: 0 0 0.3rem;
+  font-weight: 600;
+}
+
+.service-description {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  max-width: 600px;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.service-detail-content {
+  padding: 1.5rem 0;
+}
+
+.features-section {
+  margin-bottom: 4rem;
+}
+
+.features-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  position: relative;
+  padding-left: 3rem;
+}
+
+.feature-list li:before {
+  content: "✓";
+  color: var(--primary-color);
+  position: absolute;
+  left: 1rem;
+  font-weight: bold;
+}
+
+.details-section {
+  display: grid;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.detail-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  height: 400px;
+}
+
+.detail-card:nth-child(even) {
+  direction: rtl;
+}
+
+.detail-card:nth-child(even) .detail-content {
+  direction: ltr;
+}
+
+.detail-image {
+  height: 100%;
+  min-height: unset;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: transform 0.3s ease;
+}
+
+.detail-image:hover img {
+  transform: scale(1.05);
+}
+
+.detail-image::before {
+  display: none;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.detail-image img[src] {
+  opacity: 1;
+}
+
+.detail-image img[src] + .detail-image::before {
+  display: none;
+}
+
+.detail-content {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.detail-content h3 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.detail-content p {
+  color: #666;
+  line-height: 1.8;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 4rem 0;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.cta-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 2rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .service-detail-header {
+    padding: 1.2rem 0;
+  }
+
+  .service-detail-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .detail-card {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .detail-image {
+    height: 250px;
+  }
+
+  .detail-content {
+    padding: 2rem;
+  }
+
+  .service-description {
+    font-size: 0.85rem;
+  }
+}
+

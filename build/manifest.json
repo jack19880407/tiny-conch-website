@@ -1,0 +1,8 @@
+{
+  "short_name": "小螺号",
+  "name": "上海小螺号能力开发中心",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+} 
